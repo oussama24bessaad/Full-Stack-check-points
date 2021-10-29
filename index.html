@@ -17,38 +17,48 @@
   <!-- Oussama Bessaad:::::No Comment ;) -->
   <header>
 
-
+<table>
+  <th>
     <a href="#"><img
-        src="https://gomycodewebsite.blob.core.windows.net/website/img/black_Logo_342868e838_129748d4cd.svg"
-        alt="Gomycode by Oussama">
-    </a>
+      src="https://gomycodewebsite.blob.core.windows.net/website/img/black_Logo_342868e838_129748d4cd.svg"
+      alt="Gomycode by Oussama" width="200">
+          </a>
+  </th>
+  <th> <img src="/media/jack ma.jpg" height="200px" width="700"></th> 
+  
+  <th style="width: 200px;">
+    <form action="https://gomycode.com/TN-FR/home" method="get" target="_blank">
 
-    <H2>
-      <marquee behavior="scroll" direction="left" scrollamount="10" style="width: 65mm;">Welcome to Gomycode!!! © By
-        Oussama©</marquee>
-      </marquee>
-    </H2>
+     
+      <input type="button" id="currentDateTime">
+      <script>
+        var today = new Date();
+        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date + ' ' + time;
+        document.getElementById("currentDateTime").value = dateTime;
+      </script>
+   
 
+    </form>
 
-    <hr>
-    <nav>
+  </th>
+</table>
+    
+          
+<table>
+  
+<th>
+  
 
-      <form action="https://gomycode.com/TN-FR/home" method="get" target="_blank">
-
-        <button type="submit">Login</button>
-        <button type="submit" formaction="https://gomycode.com/TN-FR/home" target="_blank">Submit to Gomycode</button>
-
-        <input type="button" id="currentDateTime">
-        <script>
-          var today = new Date();
-          var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-          var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-          var dateTime = date + ' ' + time;
-          document.getElementById("currentDateTime").value = dateTime;
-        </script>
-
-      </form>
-      <hr>
+    <form action="https://gomycode.com/TN-FR/home" method="get" target="_blank">
+      
+             </th>
+      
+      <button type="submit">Login</button>
+      <button type="submit" formaction="https://gomycode.com/TN-FR/home" target="_blank">Submit to Gomycode</button>
+     
+      <nav>
       <ul style="list-style-type:square;">
         <li><a href="https://gomycode.com/TN-FR/home" target="_blank">Home</a></li>
         <li><a href="https://gomycode.com/TN-FR/store" target="_blank">Program</a></li>
@@ -57,17 +67,43 @@
         <li><a href="#bottom">Contact</a></li>
 
       </ul>
-    </nav>
-    <hr>
-    <a id="top"></a>
-    <a href="#bottom"> Bottom<img src="http://idata.over-blog.com/0/50/27/73/images/bq7yq-Fleche_animee_bas.gif"
-        height="70" width="40" alt="Bottom Of the Page"></a>
-    </a>
+      <label for="gsearch">Search:</label>
+      <input type="search" id="gsearch" name="gsearch" placeholder="Rechercher sur le site…">
+      <input type="submit" >
+    
+</nav>
 
-    </div>
+</th>
+
+    </form>
+
+
+</table>
+        
+    <hr>
+    
+    
+  
+    
   </header>
   <!-- Header End -->
-  <br>
+
+
+<!-- The sidebar 
+<div class="sidebar">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+</div>
+-->
+
+
+
+  <a id="top"></a>
+    <a href="#bottom"> <h5>Bottom</h5><img style="float: right;" src="http://idata.over-blog.com/0/50/27/73/images/bq7yq-Fleche_animee_bas.gif"
+        height="70" width="40" alt="Bottom Of the Page"></a>
+    </a>
 
   <h1> All you need to know about Gomycode!</h1>
   <h2>Check this Video</h2>
@@ -92,7 +128,7 @@
     </audio>
   </figure>
   <br>
-  <p style="color:red;"><b>Hackerspaces</p>
+  <h2 style="color: crimson;">Hackerspaces</h2>
   <table border="1" bordercolor="red">
     <colgroup span="4"></colgroup>
     <tr align="center">
@@ -143,29 +179,27 @@
 
   <br><br>
   <a id="bottom"></a>
-  <a href="#top">Top <img
-      src="https://lh3.googleusercontent.com/proxy/06L70TsA6z6hQ64N5Y01NxvhZ7aOCs8hsq1tKOGi76zCXApmi_q8ZfC2YeeNKzsYPYVRBbP_xJ1-c3CvVwMpIzsS-Nz9wH2WfZh1Vs5_xuPt"
-      height="70" width="40" alt="Bottom Of the Page"></a>
+  <a href="#top"> <h5>Top</h5> <img style="float: right;"
+      src="/media/arrowup.gif"
+      height="70" width="40" alt="Top Of the Page"></a>
   </a></a>
   </a>
 
   <table border="2" bordercolor="green" align="center" bgcolor="#D6EAF8">
-    <th>
-      <p style="color:red;" align="center"><b>Contact Us:</p>
-
+    <th style="white-space: nowrap;">
+      <p style="color:red; font-size: larger;" align="center"><b>Contact Us:</p>
+<br><br>
       <form>
-
-        First name: <input type="text" name="first_name" />
+<div class="form-align">
+        <label for="first_name"> First name: </label><input type="text" name="first_name" />
         <br>
-        Last name: <input type="text" name="last_name" />
+        <label for="Last name:"> Last name: </label> <input type="text" name="last_name" />
         <br>
-        Date of Birth: <input type="date" name="date" />
+        <label for="date"> Date of Birth:  </label><input type="date" name="date" />
         <br>
-        Last name: <input type="text" name="last_name" />
-        <br>
-        Gender: <input type="checkbox" id="Man" name="Man" value="Man">
+        <label for="Gender"> Gender: <input type="radio" id="Man" name="Man" value="Man">
         <label for="Man"> Man</label>
-        <input type="checkbox" id="Women" name="Women" value="Women">
+        <input type="radio" id="Women" name="Women" value="Women">
         <label for="Women"> Women</label><br>
 
         <label for="cars">Gouvernaurat:</label>
@@ -178,14 +212,20 @@
           <option value="Jendouba">Jendouba</option>
           <option value="Autre">Autre...</option>
         </select>
+      </div>
         <br>
-        <textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="30">Autres Informations!.</textarea>
+      
+        <textarea name="textarea" rows="5" cols="30" minlength="10" maxlength="30" placeholder="Autres Informations!.…"></textarea>
         <br>
 
         <button type="submit" formaction="https://gomycode.com/TN-FR/home" target="_blank">Submit to Gomycode</button>
-
+      
       </form>
     </th>
+    <th>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1617.199487523246!2d10.596206978638898!3d35.83921929508268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd8b840813200d%3A0x5f3bbefb88f9835d!2sGOMYCODE%20Sousse!5e0!3m2!1sen!2stn!4v1635518458407!5m2!1sen!2stn" width="850" height="450" style="border: 1px;" allowfullscreen="" loading="lazy"></iframe>
+    </th>
+   
   </table>
   <!-- Oussama Bessaad:::::No Comment ;) -->
 
@@ -195,8 +235,8 @@
 
 
 <section>
-  <marquee behavior="scroll" direction="left" scrollamount="10" style="width: 70mm;">Welcome to Gomycode!!! © By
-    Oussama©</marquee>
+  <marquee behavior="scroll" direction="left" scrollamount="10" style="width: 70mm;">Welcome to Gomycode!! By
+    Oussama <upset>©</upset></marquee>
   </marquee>
 
 </section>
@@ -223,7 +263,7 @@
 
     </p>
     <a href="mailto:oussama24bessaad@gmail.com">
-      <p>Oussama Bessaad &copy; 2021</p>
+      <br><p>Oussama Bessaad &copy; 2021</p>
     </a>
   </div>
 
