@@ -5,8 +5,8 @@ body {
   /*lefond*/color: #111;
   /*lacouleurdutexte*/font-family: "Roboto", sans-serif;
   /*lafamilletypooulapolice*/line-height: 100%;
-  /*hauteurdeligne1=100%,1.5=150%*/border: groove 1em red;
-  border-radius: 2em;
+  /*hauteurdeligne1=100%,1.5=150%*/border: groove 1em rgba(88, 190, 110, 0.342);
+  border-radius: 1em;
   padding-top: 10px;
   padding-left: 100px;
   padding-right: 100px;
@@ -15,10 +15,10 @@ body {
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
-  -webkit-border-radius: 2em;
-  -moz-border-radius: 2em;
-  -ms-border-radius: 2em;
-  -o-border-radius: 2em;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  -ms-border-radius: 1em;
+  -o-border-radius: 1em;
 }
 .form-align
 {
