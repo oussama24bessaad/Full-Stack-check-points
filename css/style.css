@@ -1,24 +1,56 @@
 /* le corps de la page et la cascade */
+
 body {
-  background: #ebdef0; /* le fond */
-  color: #111; /* la couleur du texte */
-  font-family: "Roboto", sans-serif; /* la famille typo ou la police */
-  line-height: 100%; /* hauteur de ligne 1 = 100%, 1.5 = 150% */
+  background: #ebdef0;
+  /*lefond*/color: #111;
+  /*lacouleurdutexte*/font-family: "Roboto", sans-serif;
+  /*lafamilletypooulapolice*/line-height: 100%;
+  /*hauteurdeligne1=100%,1.5=150%*/border: groove 1em red;
+  border-radius: 2em;
+  padding-top: 10px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  -webkit-border-radius: 2em;
+  -moz-border-radius: 2em;
+  -ms-border-radius: 2em;
+  -o-border-radius: 2em;
+}
+.form-align
+{
+    text-align: left;
 }
 
+h5 {
+    text-align: right;
+}
+p {
+    display: inline-block;
+}
+
+nav
+{
+    display: inline-block;
+    font-weight: 50;
+}
 ul,
 li {
   display: inline-block;
+  font-weight: 50;
 }
 
-h2,
-p {
+h2
+{
   font-style: italic;
 }
 
 /* les liens dans la navigation */
 nav a {
-  font-size: 32px; /* taille : ! on colle les unités */
+  font-size: 20px; /* taille : ! on colle les unités */
   text-decoration: none; /* pas de soulignement */
   color: darkcyan; /* la couleur de la nav */
   display: block; /* à la ligne et sur toute la longueur */
@@ -150,3 +182,54 @@ section {
     line-height: 1.8;
   }
 }
+
+
+/* The side navigation menu */
+
+/*
+.sidebar {
+    
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 40%;
+    overflow: auto;
+  }
+  
+  /* Sidebar links 
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  /* Active/current link 
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Links on mouse-over 
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property 
+  
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar 
+  @media screen and (max-width: 200px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+ 
