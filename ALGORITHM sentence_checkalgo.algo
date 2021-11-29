@@ -1,0 +1,52 @@
+ALGORITHM sentence_check
+
+VAR
+s: string;
+i: INTEGER := 0; 
+v: INTEGER := 0; 
+count: INTEGER := 0;
+
+/*The length of the sentence (the number of characters).*/
+BEGIN
+
+REPEAT
+write("write a sentence, which ends with a point.");
+read(s);
+UNTIL (s[0]<>'.')
+
+
+FOR (i = 0; i < s.length(); i++) DO
+
+
+
+IF (s.charAt(i) != ' ') THEN 
+ SWITCH (sentence[i]) DO //The number of vowels in the sentence.
+    case "a" : v := v+1; break;
+    case "a" : v := v+1; break;
+    case "a" : v := v+1; break;
+    case "e" : v := v+1; break;
+    case "o" : v := v+1; break;
+    case "u" : v := v+1; break;
+    case "i" : v := v+1; break;
+    case "y" : v := v+1; break;
+ END_SWITCH
+
+    i++;  
+END_IF
+
+write ("Total number of characters in the sentence: " + i);
+Write ("Total number of vowels in the sentence: " + v);
+
+END_FOR
+
+//The number of words in the sentence (assuming that the words are separated by a single space)
+IF ((s[0]=' ' and s[i-1]<>' ') or (s[0]<>' ' and s[i-1]=' ') ) THEN
+write("Nbr of words =", w);   
+ELSE_IF (s[0]=' ' and s[i-1]=' ') THEN
+write("Nbr of words =", w-1);
+ELSE
+write("Nbr of words =", w+1);
+END_IF
+
+
+END
