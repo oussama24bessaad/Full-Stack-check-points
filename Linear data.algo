@@ -1,0 +1,101 @@
+ALGORITHM TAB-SOM
+VAR
+
+tab1:array[50] of integer;
+tab2:array[50] of integer;
+sum,sd,i,j,su :integer;
+ check: boolean;
+
+BEGIN
+//sum of the 2 tables
+sum:=0;
+FOR i FROM 0 TO tab1.length STEP 1  DO
+    sum=sum+tab1[i]+tab2[i];
+END_FOR
+IF tab1[i]<>tab2[i] 
+THEN write ("erreur");
+END_IF
+
+
+//the sum of all distinct elements
+sd:=0
+FOR i FROM 0 TO tab1.length STEP 1  DO
+check := false;
+FOR j FROM 0 TO tab2.length STEP 1  DO
+IF tab1[i]=tab2[j] 
+check := true;
+break;
+IF check!=true
+sd=sd+tab1[i];
+END_FOR
+ 
+FOR i FROM 0 TO tab2.length STEP 1  DO
+check := false;
+FOR j FROM 0 TO tab1.length STEP 1  DO
+IF tab1[i]=tab2[j] 
+check := true;
+break;
+IF check!=true;
+sd=sd+tab2[i];
+END_FOR
+
+//sum of The unique elements in each set and there are no duplicates within a set
+su:=0;
+IF (tab1[i]<>tab2[i]) or ((tab1[i]<>tab1[i+1])and (tab2[i]<>tab2[i+1]))
+FOR i FROM 0 TO tab1.length STEP 1  DO
+   su=su+tab1[i]+tab2[i];
+END_FOR
+ELSE write ("erreur");
+
+
+ write ("la somme de deux tableaux est",sum)
+ write ("la somme de deux tableaux distinct est",sd)
+ write ("la somme de deux tableaux avec pas de doublons:",su)
+END
+
+
+
+
+ALGORITHM sum-has
+VAR
+    htab1,htab2 : HASH_TABLE<INTEGER,INTEGER>;
+    i,j: integer;
+    check: boolean;
+BEGIN
+    
+ write("input the Size of htab1");
+ write("input the Size of htab2");
+ read(t1);
+ read(t2);
+ check := "false";
+ sum :=0;
+FOR i FROM 0 TO t1-1 STEP 1  DO
+    htab1.insert(0);
+END_FOR
+FOR j FROM 0 TO t2-1 STEP 1  DO
+        htab2.insert(0);
+END_FOR
+FOR i FROM 0 TO t1-1 STEP 1  DO
+    FOR j FROM 0 TO t2-1 STEP 1  DO
+        IF (htab1.get(i)=htab2.get(j)) THEN
+            check:="true";
+            break;
+        END_IF
+        IF (check="false") THEN
+        sum := sum + htab1.get(i);
+        END_IF
+    END_FOR
+END_FOR
+FOR j FROM 0 TO t2-1 STEP 1  DO
+    FOR i FROM 0 TO t1-1 STEP 1  DO
+        IF (htab1.get(j)=htab2.get(i)) THEN
+            check:="true";
+            break;
+        END_IF
+        IF (check="false") THEN
+        sum := sum + htab2.get(j);
+        END_IF
+    END_FOR
+END_FOR
+  write("the sum of all elements which are not present in either of the given set is ",sum);
+  END
