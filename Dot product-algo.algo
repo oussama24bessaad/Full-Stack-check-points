@@ -1,0 +1,95 @@
+//1
+FUNCTION read_size() : INTEGER
+VAR
+    n:INTEGER;
+BEGIN
+    REPEAT
+        read(n);
+    UNTIL ((n>=0)and(n<=100))
+    RETURN n ;
+END
+PROCEDURE read_vectors(n:INTEGER VAR T:ARRAY_OF INTEGER)
+VAR
+    i:INTEGER.
+BEGIN
+    FOR i FROM 1 TO n STEP 1 DO
+        read(T[i]);
+    END_FOR
+END
+PROCEDURE dot_product(n:INTEGER VAR T1,T2:ARRAY_OF INTEGER)
+VAR
+    i :INTEGER ;
+BEGIN
+    FOR i FROM 1 TO n STEP 1  DO
+        sum :=sum + T1[i]*T2[i];
+    END_FOR
+END
+
+ALGORITHM product_vectors
+VAR
+    tab1,tab2: ARRAY_OF INTEGER[100];
+    n1,n2,sum: INTEGER;
+BEGIN
+    sum :=0;
+    n1:=read_size();
+    n2:=read_size();
+        IF (n1<>n2) THEN
+            write("please type correct size of vectors");
+        END_IF
+    read_vectors(n1,tab1);
+    read_vectors(n2,tab2);
+    dot_product(n1,tab1,tab2);
+    IF (sum=0) THEN
+        write("the two vectors are orthogonal")
+    else 
+        write("the two vectors are not orthogonal")
+    END_IF
+END
+//2
+FUNCTION read_size() : INTEGER
+VAR
+    n:INTEGER;
+BEGIN
+    REPEAT
+        read(n);
+    UNTIL ((n>=0)and(n<=100))
+    RETURN n ;
+END
+PROCEDURE read_vectors(n:INTEGER VAR T:ARRAY_OF INTEGER)
+VAR
+    i:INTEGER.
+BEGIN
+    FOR i FROM 1 TO n STEP 1 DO
+        read(T[i]);
+    END_FOR
+END
+FUNCTION dot_product(n:INTEGER VAR T1,T2:ARRAY_OF INTEGER):INTEGER
+VAR
+    i,sum :INTEGER ;
+BEGIN
+    FOR i FROM 1 TO n STEP 1  DO
+        sum :=sum + T1[i]*T2[i];
+    END_FOR
+    return sum
+END
+
+ALGORITHM product_vectors
+VAR
+    tab1,tab2: ARRAY_OF INTEGER[100];
+    n1,n2: INTEGER;
+BEGIN
+    sum :=0;
+    n1:=read_size();
+    n2:=read_size();
+        IF (n1<>n2) THEN
+            write("please type correct size of vectors");
+        END_IF
+    read_vectors(n1,tab1);
+    read_vectors(n2,tab2);
+    sum := dot_product(n1,tab1,tab2);
+    IF (sum=0) THEN
+        write("the two vectors are orthogonal")
+    else 
+        write("the two vectors are not orthogonal")
+    END_IF
+END
