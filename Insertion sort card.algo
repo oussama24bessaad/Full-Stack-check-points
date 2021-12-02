@@ -1,0 +1,54 @@
+FUNCTION read_number() : INTEGER
+VAR
+    n:INTEGER;
+BEGIN
+    REPEAT
+        read(n);
+    UNTIL ((n>=0)and(n<=100))
+    RETURN n ;
+END
+PROCEDURE read_array(n:INTEGER VAR T:ARRAY_OF INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    FOR i FROM 1 TO n STEP 1 DO
+        read(T[i]);
+    END_FOR
+END
+PROCEDURE input_cards(n:INTEGER VAR T:ARRAY_OF INTEGER)
+VAR
+    i,max:INTEGER;
+BEGIN
+        i:=n-1;
+        IF (T[i]<x) THEN
+            T[i+1]:=x;
+        ELSE
+            REPEAT
+                max:=T[i];
+                T[i+1]:=max;
+                i:=i-1;
+            UNTIL (T[i]<x)
+            T[i+1]:=x;
+        END_IF
+END
+PROCEDURE print_array(n:INTEGER VAR T:ARRAY_OF INTEGER)
+VAR
+    i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO n-1 STEP 1 DO
+        write(T[i]);
+    END_FOR
+END
+
+
+ALGORITHM sum_arrays
+VAR
+    tab1:ARRAY_OF INTEGER;
+    n,x:INTEGER;
+BEGIN
+    n:=read_number();
+    read_array(n,tab1);
+    X:=read_number();
+    input_cards(n,tab1);
+    print_array(n,tab1);
+END
